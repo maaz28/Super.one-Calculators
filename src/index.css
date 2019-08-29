@@ -1,0 +1,9 @@
+body {
+background: -webkit-linear-gradient(10deg, rgb(39, 0, 60) 0%, rgb(81, 0, 96) 40%, rgb(17, 0, 30) 90%, rgb(8, 0, 19) 100%);
+background: -o-linear-gradient(10deg, rgb(39, 0, 60) 0%, rgb(81, 0, 96) 40%, rgb(17, 0, 30) 90%, rgb(8, 0, 19) 100%);
+background: -ms-linear-gradient(10deg, rgb(39, 0, 60) 0%, rgb(81, 0, 96) 40%, rgb(17, 0, 30) 90%, rgb(8, 0, 19) 100%);
+background: -moz-linear-gradient(10deg, rgb(39, 0, 60) 0%, rgb(81, 0, 96) 40%, rgb(17, 0, 30) 90%, rgb(8, 0, 19) 100%);
+background: linear-gradient(80deg, rgb(39, 0, 60) 0%, rgb(81, 0, 96) 40%, rgb(17, 0, 30) 90%, rgb(8, 0, 19) 100%);
+    color: white;
+    height : 100vh
+}
