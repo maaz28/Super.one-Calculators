@@ -147,10 +147,65 @@ export const virality_values = () => {
   return virality;
 }
 
-export const levels_values = () => {
-  let levels = [];
-  for (let i = 2; i <= 10; i++) {
-    levels.push({ value: i, label: String(i) });
-  }
-  return levels;
-}
+export const levels_values = [
+  {
+    value: 1,
+    label: "1",
+  },
+  {
+    value: 4,
+    label: "2",
+  },
+  {
+    value: 13,
+    label: "3",
+  },
+  {
+    value: 40,
+    label: "4",
+  },
+  {
+    value: 121,
+    label: "5",
+  },
+  {
+    value: 364,
+    label: "6",
+  },
+  {
+    value: 1093,
+    label: "7",
+  },
+  {
+    value: 3280,
+    label: "8",
+  },
+  {
+    value: 9841,
+    label: "9",
+  },
+  {
+    value: 29524,
+    label: "10",
+  },
+  {
+    value: 88573,
+    label: "11",
+  },
+  {
+    value: 265720,
+    label: "12",
+  },
+  {
+    value: 797161,
+    label: "13",
+  },
+  {
+    value: 2391484,
+    label: "14",
+  },
+  {
+    value: 7174453,
+    label: "15",
+  },
+];
