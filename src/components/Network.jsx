@@ -86,7 +86,7 @@ export default class Network extends Component {
     return (
       <div>
         <Topbar />
-        <div>
+        <div className="container">
           <div id="box-3">
             <div className="row mb-2">
               <div className="col">
@@ -118,7 +118,7 @@ export default class Network extends Component {
             </div>
 
             <Grid container spacing={2}>
-              <Grid item xs={6} align="center">
+              <Grid item xs={12} sm={6} lg={3} align="center">
                 <Paper
                   id="id1"
                   className={`paper ${btn_class1}`}
@@ -127,7 +127,7 @@ export default class Network extends Component {
                   $100
                 </Paper>
               </Grid>
-              <Grid item xs={6} align="center">
+              <Grid item xs={12} sm={6} lg={3} align="center">
                 <Paper
                   id="id2"
                   className={`paper ${btn_class2}`}
@@ -136,7 +136,7 @@ export default class Network extends Component {
                   $500
                 </Paper>
               </Grid>
-              <Grid item xs={6} align="center">
+              <Grid item xs={12} sm={6} lg={3} align="center">
                 <Paper
                   id="id3"
                   className={`paper ${btn_class3}`}
@@ -145,7 +145,7 @@ export default class Network extends Component {
                   $1000
                 </Paper>
               </Grid>
-              <Grid item xs={6} align="center">
+              <Grid item xs={12} sm={6} lg={3} align="center">
                 <Paper
                   id="id4"
                   className={`paper ${btn_class4}`}

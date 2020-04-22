@@ -58,14 +58,7 @@ export default class Box1 extends React.Component {
               <IconLabelButtons title="coding" />
               <IconLabelButtons title="token" />
             </Grid>
-            <Grid item xs={12} align="center"></Grid>
           </Grid>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
           <br />
 
           <Grid container>

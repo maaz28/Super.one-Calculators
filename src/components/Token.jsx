@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import Dropdown from "./common/Dropdown";
-import "./App.css";
+import React, { Component } from 'react';
+import Dropdown from './common/Dropdown';
+import './App.css';
 import {
   user_values,
   annualARPU_values,
   token_values,
   price_values,
-} from "./TokenCalculator/dropdown_const_value";
-import { token_rewards, token_sale } from "./TokenCalculator/algo";
-import { Grid } from "@material-ui/core";
-import Topbar from "./common/Topbar";
+} from './TokenCalculator/dropdown_const_value';
+import { token_rewards, token_sale } from './TokenCalculator/algo';
+import { Grid } from '@material-ui/core';
+import Topbar from './common/Topbar';
 // const levels_arr = [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10];
 
 export default class Token extends Component {
@@ -45,50 +45,36 @@ export default class Token extends Component {
           <br />
           <div className="container-fluid col-md-7 ">
             <Grid container>
-              <Grid item xs={6}>
+              <Grid item xs={12} md={6}>
                 <div className="row mb-2">
                   <div className="col">
                     <h4 className="medium-14 custom-color">
                       <b>Token rewards</b>
                     </h4>
-                  </div>
-                </div>
-              </Grid>
-              <Grid item xs={6}>
-                <div className="row mb-2">
-                  <div className="col">
-                    <h4 className="medium-14 custom-color">
-                      <b>Token value</b>
-                    </h4>
-                  </div>
-                </div>
-              </Grid>
-            </Grid>
-            <Grid container>
-              <Grid item xs={6}>
-                <div className="row mb-5">
-                  <div className="col">
                     <h2 className="numeric-35">
                       <b>
                         $
                         {TR.toFixed(0).replace(
                           /(\d)(?=(\d{3})+(?!\d))/g,
-                          "$1,"
+                          '$1,'
                         )}
                       </b>
                     </h2>
                   </div>
                 </div>
               </Grid>
-              <Grid item xs={6}>
-                <div className="row mb-5">
+              <Grid item xs={12} md={6}>
+                <div className="row mb-2">
                   <div className="col">
+                    <h4 className="medium-14 custom-color">
+                      <b>Token value</b>
+                    </h4>
                     <h2 className="numeric-35">
                       <b>
                         $
                         {TV.toFixed(0).replace(
                           /(\d)(?=(\d{3})+(?!\d))/g,
-                          "$1,"
+                          '$1,'
                         )}
                       </b>
                     </h2>
@@ -97,15 +83,6 @@ export default class Token extends Component {
               </Grid>
             </Grid>
           </div>
-          {/* <div className="row mb-5">
-            <div className="col">
-              <h2 className="numeric-35">
-                <b>
-                  ${profit.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
-                </b>
-              </h2>
-            </div>
-          </div> */}
           <div className="container-fluid col-md-7 line-space custom-color">
             <Dropdown
               label="Users"
@@ -113,6 +90,9 @@ export default class Token extends Component {
               values={user_values()}
               func={this.setValue}
               default_value_index={1}
+              style={{
+                fontSize: '30px',
+              }}
             />
           </div>
           <div className="container-fluid col-md-7 line-space custom-color">
@@ -126,7 +106,7 @@ export default class Token extends Component {
           </div>
           <div className="container-fluid col-md-7 line-space custom-color">
             <Dropdown
-              label="tokens"
+              label="Tokens"
               id="T"
               values={token_values()}
               func={this.setValue}
@@ -147,11 +127,12 @@ export default class Token extends Component {
 
           <div
             style={{
-              fontSize: "10px",
+              fontSize: '10px',
+              marginBottom: '2rem',
             }}
           >
             <i>
-              {" "}
+              {' '}
               This calculator provides estimates of potential rewards and does
               not constitute or guarantee any profit. The estimates are based on
               all members recruiting a minimum of three new members each, as

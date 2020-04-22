@@ -6,6 +6,7 @@ const customStyles = {
     ...provided,
     textAlign: 'left',
     marginLeft: '5px',
+    fontSize: '1rem',
   }),
   option: (styles, { data, isFocused, isSelected }) => {
     console.log(data);
