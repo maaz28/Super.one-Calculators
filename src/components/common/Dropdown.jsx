@@ -1,25 +1,17 @@
 import React from 'react';
-import Select from 'react-select'
+import Select from 'react-select';
 
 const customStyles = {
-  control: styles => ({ ...styles, backgroundColor: 'white', height: '40px' }),
-  option: (provided, state) => ({
-    ...provided,
-    color: state.isSelected ? 'blue' : 'black',
-    padding: 0,
-  }),
   menuList: (provided, state) => ({
     ...provided,
     textAlign: 'left',
-    marginLeft: '5px'
+    marginLeft: '5px',
   }),
   option: (styles, { data, isFocused, isSelected }) => {
-    console.log(data)
+    console.log(data);
     return {
       ...styles,
-      fontWeight: data.label.includes("SuperOne")
-        ? 'bold'
-        : 'normal',
+      fontWeight: data.label.includes('SuperOne') ? 'bold' : 'normal',
       color: isSelected ? 'White' : 'black',
     };
   },
@@ -28,19 +20,25 @@ const customStyles = {
     const transition = 'opacity 300ms';
     return { ...provided, opacity, transition };
   },
+};
 
-}
-
-
-export default function SimpleSelect({ func, label, id, values, default_value_index }) {
-
+export default function SimpleSelect({
+  func,
+  label,
+  id,
+  values,
+  default_value_index,
+}) {
   const handleChange = (event) => {
     func(event.value, id);
-  }
+  };
 
   return (
     <>
-      <label for={id} style={{ display: 'flex', fontSize: '15px', fontWeight: 'bold' }}>
+      <label
+        for={id}
+        style={{ display: 'flex', fontSize: '15px', fontWeight: 'bold' }}
+      >
         {label}
       </label>
       <div>

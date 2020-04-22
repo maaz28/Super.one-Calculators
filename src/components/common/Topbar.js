@@ -1,8 +1,8 @@
-import React from "react";
-import { Grid, Button } from "@material-ui/core";
-import Logo from "../../images/logo1.png";
-import Arrow from "@material-ui/icons/KeyboardArrowLeft";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Grid } from '@material-ui/core';
+import Logo from '../../images/logo1.png';
+import Arrow from '@material-ui/icons/KeyboardArrowLeft';
+import { Link } from 'react-router-dom';
 
 export default function Topbar() {
   return (
@@ -12,18 +12,18 @@ export default function Topbar() {
           <Link
             to="/"
             style={{
-              float: "left",
-              marginLeft: "5px",
-              color: "black",
-              fontWeight: "bold",
+              float: 'left',
+              marginLeft: '5px',
+              color: 'black',
+              fontWeight: 'bold',
             }}
           >
             <Arrow />
           </Link>
-          <Link to={"/"}>
+          <Link to={'/'}>
             <img
               src={Logo}
-              style={{ width: "120px", marginLeft: "-40px" }}
+              style={{ width: '120px', marginLeft: '-40px' }}
               alt=""
               srcset=""
             />

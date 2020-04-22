@@ -1,13 +1,12 @@
-import React, { Component } from "react";
-import Dropdown from "./common/Dropdown";
-import { calculateTokenPriceInDollars } from "../smartContractFunc/functions";
-import { levels_values } from "./NetworkCalculator/Dropdown_constant_values";
-import "./App.css";
-import Topbar from "./common/Topbar";
-import { Grid } from "@material-ui/core";
-import Paper from "@material-ui/core/Paper";
-import SliderReferral from "./common/SliderReferral";
-import SliderLevel from "./common/SliderLevel";
+import React, { Component } from 'react';
+import { calculateTokenPriceInDollars } from '../smartContractFunc/functions';
+import { levels_values } from './NetworkCalculator/Dropdown_constant_values';
+import './App.css';
+import Topbar from './common/Topbar';
+import { Grid } from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
+import SliderReferral from './common/SliderReferral';
+import SliderLevel from './common/SliderLevel';
 // const levels_arr = [level1, level2, level3, level4, level5, level6, level7, level8, level9, level10];
 
 export default class Network extends Component {
@@ -15,12 +14,11 @@ export default class Network extends Component {
     super();
 
     this.state = {
-      pkg: 0.83,
       id1: false,
       id2: true,
       id3: false,
       id4: false,
-      prevId: "id2",
+      prevId: 'id2',
       referral: 6,
       level: 7,
       pkg: 50,
@@ -71,15 +69,15 @@ export default class Network extends Component {
   };
 
   render() {
-    let btn_class1 = this.state.id1 ? "clicked" : "normal";
-    let btn_class2 = this.state.id2 ? "clicked" : "normal";
-    let btn_class3 = this.state.id3 ? "clicked" : "normal";
-    let btn_class4 = this.state.id4 ? "clicked" : "normal";
+    let btn_class1 = this.state.id1 ? 'clicked' : 'normal';
+    let btn_class2 = this.state.id2 ? 'clicked' : 'normal';
+    let btn_class3 = this.state.id3 ? 'clicked' : 'normal';
+    let btn_class4 = this.state.id4 ? 'clicked' : 'normal';
 
     const { referral, level, pkg } = this.state;
     const resolved_level = levels_values.find((element) => {
       console.log(element);
-      return element.label == String(level);
+      return element.label === String(level);
     });
     console.log(resolved_level);
     let profit = (referral - 3) * pkg * resolved_level.value;
@@ -105,7 +103,7 @@ export default class Network extends Component {
                     $
                     {profit
                       .toFixed(0)
-                      .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+                      .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                   </b>
                 </h2>
               </div>
@@ -171,7 +169,7 @@ export default class Network extends Component {
                   <b>
                     {referral
                       .toFixed(0)
-                      .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+                      .replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                   </b>
                 </h2>
               </div>
@@ -194,7 +192,7 @@ export default class Network extends Component {
               <div className="col">
                 <h2 className="numeric-35">
                   <b>
-                    {level.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")}
+                    {level.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}
                   </b>
                 </h2>
               </div>
@@ -206,11 +204,11 @@ export default class Network extends Component {
 
             <div
               style={{
-                fontSize: "10px",
+                fontSize: '10px',
               }}
             >
               <i>
-                {" "}
+                {' '}
                 This calculator provides estimates of potential rewards and does
                 not constitute or guarantee any profit. The estimates are based
                 on all members recruiting a minimum of three new members each,
