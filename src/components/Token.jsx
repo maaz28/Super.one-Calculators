@@ -142,6 +142,22 @@ export default class Token extends Component {
               default_value_index={2}
             />
           </div>
+          <br />
+          <br />
+
+          <div
+            style={{
+              fontSize: "10px",
+            }}
+          >
+            <i>
+              {" "}
+              This calculator provides estimates of potential rewards and does
+              not constitute or guarantee any profit. The estimates are based on
+              all members recruiting a minimum of three new members each, as
+              this is the coding requirement.
+            </i>
+          </div>
         </div>
       </div>
     );

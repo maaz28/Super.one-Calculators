@@ -12,12 +12,12 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 .custom-color {
-  color: rgba(175, 0, 204, 1);
+  color: rgb(131, 0, 154, 0.8);
   /* border: '#B267CC'; */
 }
 
 .clicked {
-  background-color: #b669cc !important;
+  background-color: #83009a !important;
   color: white !important;
 }
 

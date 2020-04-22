@@ -15,19 +15,15 @@ export default class Network extends Component {
     super();
 
     this.state = {
-      referrals: 5,
-      virality: 2,
-      levels: 10,
-      purchase: 1,
       pkg: 0.83,
       id1: false,
       id2: true,
       id3: false,
       id4: false,
       prevId: "id2",
-      referral: 70,
+      referral: 6,
       level: 7,
-      pkg: 10,
+      pkg: 50,
     };
 
     this.setValue = this.setValue.bind(this);
@@ -86,7 +82,7 @@ export default class Network extends Component {
       return element.label == String(level);
     });
     console.log(resolved_level);
-    let profit = referral * pkg * resolved_level.value;
+    let profit = (referral - 3) * pkg * resolved_level.value;
 
     console.log(profit);
     return (
@@ -146,7 +142,7 @@ export default class Network extends Component {
                 <Paper
                   id="id3"
                   className={`paper ${btn_class3}`}
-                  onClick={(ev) => this.boxHandler(ev, 1000)}
+                  onClick={(ev) => this.boxHandler(ev, 100)}
                 >
                   $1000
                 </Paper>
@@ -155,7 +151,7 @@ export default class Network extends Component {
                 <Paper
                   id="id4"
                   className={`paper ${btn_class4}`}
-                  onClick={(ev) => this.boxHandler(ev, 2500)}
+                  onClick={(ev) => this.boxHandler(ev, 250)}
                 >
                   $2500
                 </Paper>
@@ -169,7 +165,7 @@ export default class Network extends Component {
                 </h4>
               </div>
             </div>
-            <div className="row mb-5">
+            <div className="row">
               <div className="col">
                 <h2 className="numeric-35">
                   <b>
@@ -183,6 +179,10 @@ export default class Network extends Component {
             <SliderReferral valueChange={this.referralValueChange} />
 
             <br />
+            <br />
+            <br />
+            {/* <br /> */}
+
             <div className="row mb-2">
               <div className="col">
                 <h4 className="medium-14 custom-color">
@@ -190,7 +190,7 @@ export default class Network extends Component {
                 </h4>
               </div>
             </div>
-            <div className="row mb-5">
+            <div className="row">
               <div className="col">
                 <h2 className="numeric-35">
                   <b>
@@ -202,6 +202,7 @@ export default class Network extends Component {
             <SliderLevel valueChange={this.levelValueChange} />
             <br />
             <br />
+            <br />
 
             <div
               style={{
@@ -210,8 +211,10 @@ export default class Network extends Component {
             >
               <i>
                 {" "}
-                The estimates are based on all members referring three new
-                members as coding requirement.
+                This calculator provides estimates of potential rewards and does
+                not constitute or guarantee any profit. The estimates are based
+                on all members recruiting a minimum of three new members each,
+                as this is the coding requirement.
               </i>
             </div>
           </div>
