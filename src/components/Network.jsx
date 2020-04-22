@@ -205,6 +205,7 @@ export default class Network extends Component {
             <div
               style={{
                 fontSize: '10px',
+                marginBottom: '2rem',
               }}
             >
               <i>
